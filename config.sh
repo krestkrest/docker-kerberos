@@ -8,6 +8,7 @@
 : ${KERB_ADMIN_USER:=admin}
 : ${KERB_ADMIN_PASS:=admin}
 : ${SEARCH_DOMAINS:=search.consul node.dc1.consul}
+: ${IGNORE_ACCEPTOR_HOSTNAME:=false}
 
 fix_nameserver() {
   cat>/etc/resolv.conf<<EOF
@@ -36,6 +37,7 @@ create_config() {
  ticket_lifetime = 24h
  renew_lifetime = 7d
  forwardable = true
+ ignore_acceptor_hostname = $IGNORE_ACCEPTOR_HOSTNAME
 
 [realms]
  $REALM = {

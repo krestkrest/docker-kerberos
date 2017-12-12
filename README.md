@@ -19,14 +19,15 @@ Once the container is running you can enable kerberos with `Ambari`.
 
 Useful environment variables:
 
-| Environmenr variables | Description |
-| --------------------- | ----------------------------- |
-| `REALM`               | the Kerberos realm            |
-| `DOMAIN_REALM`        | the DNS domain for the realm  |
-| `KERB_MASTER_KEY`     | master key for the KDC        |
-| `KERB_ADMIN_USER`     | administrator account name    |
-| `KERB_ADMIN_PASS`     | administrator's password      |
-| `SEARCH_DOMAINS`      | domain suffix search list     |
+| Environmenr variables      | Description                                    |
+| -------------------------- | ---------------------------------------------- |
+| `REALM`                    | the Kerberos realm                             |
+| `DOMAIN_REALM`             | the DNS domain for the realm                   |
+| `KERB_MASTER_KEY`          | master key for the KDC                         |
+| `KERB_ADMIN_USER`          | administrator account name                     |
+| `KERB_ADMIN_PASS`          | administrator's password                       |
+| `SEARCH_DOMAINS`           | domain suffix search list                      |
+| `IGNORE_ACCEPTOR_HOSTNAME` | whether to check the principal hostname or not |
 
 ### Test
 Once kerberos is enabled you need a `ticket` to execute any job on the cluster. Here's an example to get a ticket:
